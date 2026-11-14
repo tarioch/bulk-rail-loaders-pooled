@@ -61,7 +61,9 @@ timeout of at least 1 second.
 * All graphics (`graphics/loader-*.png`, `graphics/unloader-*.png`) are from
   [railloader by mspielberg (therax)](https://github.com/mspielberg/factorio-railloader),
   licensed **LGPL-3.0** (see `LICENSE-railloader-graphics`). Keep that license
-  file and this attribution if you redistribute the mod.
+  file and this attribution if you redistribute the mod. The unloader images
+  are modified: shortened from 6 to 4 tiles to match the silo, with a
+  wall drawn around the pit.
 
 ## Development
 

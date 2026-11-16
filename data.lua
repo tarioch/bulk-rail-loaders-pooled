@@ -18,6 +18,16 @@ local silo = {
     selection_box = {{-1.85, -1.85}, {1.85, 1.85}},
     draw_inventory_content = true,
     circuit_wire_max_distance = 9,
+    -- Hook red/green wires near the top-right corner instead of the entity
+    -- centre. One point has to fit all four runtime-drawn looks: it lands on
+    -- the hopper frame of the loader and on the stone rim of the unloader,
+    -- clear of the grate and the rails.
+    circuit_connector = {{
+        points = {
+            wire = {red = {1.4, -1.55}, green = {1.62, -1.55}},
+            shadow = {red = {1.6, -1.35}, green = {1.82, -1.35}}
+        }
+    }},
     -- keep the alt-mode content icons small and on the entity itself
     -- (they overlay the tipper grate / hopper instead of floating above)
     icon_draw_specification = {shift = {0, 0.4}, scale = 0.8, scale_for_many = 1.2}

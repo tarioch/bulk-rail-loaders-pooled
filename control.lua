@@ -594,7 +594,7 @@ local function build_stop_gui(player, stop)
         }
     }
 
-    frame.add{type = "label", name = "mbrlp-count-label",
+    frame.add{type = "label", name = "mbrlp-wagons-label",
         caption = "Wagons: " .. storage.ui_count}.style.font = "heading-2"
     local adjust = frame.add{type = "flow", direction = "horizontal"}
     adjust.add{type = "button", name = "mbrlp-minus", caption = "-"}.style.maximal_width = 52

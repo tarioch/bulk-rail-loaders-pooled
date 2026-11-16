@@ -1,4 +1,11 @@
-# Modern Bulk Rail Loaders: Pooled
+# Bulk Rail Loaders: Pooled Plus
+
+A fork of
+[Modern Bulk Rail Loaders: Pooled](https://github.com/solvemon/bulk-rail-loaders-pooled)
+by Sølve Monteiro, based on the Factorio 2.1 port by
+[kfsone](https://github.com/kfsone/bulk-rail-loaders-pooled). It adds exact
+loading for Cybersyn 2 deliveries and reworked graphics. It replaces the
+original mod and cannot be enabled together with it.
 
 A pooled-inventory rework of the bulk rail loader concept. Every station has
 **one** hidden cargo inventory (the *pool*); each visible silo is a Factorio 2.0
@@ -11,7 +18,7 @@ only one inventory per station:
 * Factory inserters/loaders can feed or drain **any** silo; it all lands in the
   same pool.
 
-Requires **Factorio ≥ 2.1.0**. (This fork only bumps compatibility from the upstream 2.0 release; 2.0 users should use the upstream mod.)
+Requires **Factorio ≥ 2.1.0**. Factorio 2.0 users should use the original mod.
 
 ## Usage
 
@@ -57,7 +64,8 @@ timeout of at least 1 second.
 
 ## Licensing / attribution
 
-* Code: original to this mod.
+* Code: by Sølve Monteiro (original mod), kfsone (Factorio 2.1 port) and
+  tarioch (this fork).
 * All graphics (`graphics/loader-*.png`, `graphics/unloader-*.png`) are from
   [railloader by mspielberg (therax)](https://github.com/mspielberg/factorio-railloader),
   licensed **LGPL-3.0** (see `LICENSE-railloader-graphics`). Keep that license
@@ -75,5 +83,5 @@ Symlink into your mods folder under the mod's name (the folder name must match
 `info.json`):
 
 ```
-ln -s /path/to/this/repo ~/.factorio/mods/modern-bulk-rail-loader-pooled
+ln -s /path/to/this/repo ~/.factorio/mods/bulk-rail-loaders-pooled-plus
 ```

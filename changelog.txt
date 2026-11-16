@@ -1,0 +1,13 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2026-11-16
+  Features:
+    - Loading stations load exactly the items and amounts of a Cybersyn 2 delivery.
+  Graphics:
+    - The unloader grate fits the 4x4 silo, has a wall around the pit and is drawn under the rails.
+    - The loader is drawn at double resolution with a brushed-metal frame and a softer shadow.
+    - The vertical loader has a ribbed panel over its track opening.
+  Bugfixes:
+    - Silos can be placed over ore.
+  Info:
+    - First release of the fork under the name bulk-rail-loaders-pooled-plus.

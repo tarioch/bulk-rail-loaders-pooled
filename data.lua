@@ -63,23 +63,25 @@ local sprites = {
         type = "sprite",
         name = "mbrlp-loader-horizontal",
         filename = "__modern-bulk-rail-loader-pooled__/graphics/loader-horizontal.png",
-        width = 188,
-        height = 210,
+        width = 376,
+        height = 420,
+        scale = 0.5,
         shift = util.by_pixel(0, -16)
     },
     {
         type = "sprite",
         name = "mbrlp-loader-vertical",
         filename = "__modern-bulk-rail-loader-pooled__/graphics/loader-vertical.png",
-        width = 188,
-        height = 210,
+        width = 376,
+        height = 420,
+        scale = 0.5,
         shift = util.by_pixel(0, -16)
     },
     {
         type = "sprite",
         name = "mbrlp-unloader-horizontal",
         filename = "__modern-bulk-rail-loader-pooled__/graphics/unloader-horizontal.png",
-        width = 384,
+        width = 256,
         height = 256,
         scale = 0.5
     },
@@ -88,7 +90,7 @@ local sprites = {
         name = "mbrlp-unloader-vertical",
         filename = "__modern-bulk-rail-loader-pooled__/graphics/unloader-vertical.png",
         width = 256,
-        height = 384,
+        height = 256,
         scale = 0.5
     }
 }

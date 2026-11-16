@@ -11,3 +11,5 @@ Date: 2026-11-16
     - Silos can be placed over ore.
   Info:
     - First release of the fork under the name bulk-rail-loaders-pooled-plus.
+    - Stations in a save made with the original mod or the Unofficial 2.1 Fix are re-registered on first load (from the Unofficial 2.1 Fix by kfsone). Station mode resets to Load.
+    - Remote interface mbrlp with set_station_mode and get_station_mode (from the Unofficial 2.1 Fix by kfsone).

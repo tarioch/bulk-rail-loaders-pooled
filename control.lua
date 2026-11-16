@@ -439,7 +439,7 @@ local function classify_position(surface, position)
             and entity.name ~= INSERTER_NAME
             and t ~= "straight-rail"
             and t ~= "corpse"
-            and t ~= "resource" -- ore under the track does not obstruct
+            and t ~= "resource"
             and t ~= "cargo-wagon"
             and t ~= "locomotive"
             and t ~= "character" then

@@ -1,13 +1,16 @@
 {
-    "name": "modern-bulk-rail-loader-pooled",
-    "version": "0.2.0",
-    "title": "Modern Bulk Rail Loaders: Pooled",
-    "author": "Sølve Monteiro",
-    "description": "Bulk train loading/unloading silos that share a single pooled inventory per station. Contents can never get unbalanced between wagons, so automated deliveries (e.g. Cybersyn) always complete when the station total suffices. Pooled-architecture rework inspired by Modern Bulk Rail Loader by Vyl.",
+    "name": "bulk-rail-loaders-pooled-plus",
+    "version": "0.3.0",
+    "title": "Bulk Rail Loaders: Pooled Plus",
+    "author": "tarioch, Sølve Monteiro",
+    "homepage": "https://github.com/tarioch/bulk-rail-loaders-pooled",
+    "description": "Bulk train loading/unloading silos that share a single pooled inventory per station. Contents can never get unbalanced between wagons, so automated deliveries (e.g. Cybersyn) always complete when the station total suffices. Fork of Modern Bulk Rail Loaders: Pooled by Sølve Monteiro for Factorio 2.1, with exact loading for Cybersyn 2 deliveries and reworked graphics. Replaces the original mod and the Unofficial 2.1 Fix: disable them first; silos and pools already in a save are re-registered on first load.",
     "factorio_version": "2.1",
     "dependencies": [
         "base >= 2.1.0",
         "? cybersyn",
-        "? cybersyn2"
+        "? cybersyn2",
+        "! modern-bulk-rail-loader-pooled",
+        "! modern-bulk-rail-loader-pooled-Unofficial-2-1Fix"
     ]
 }

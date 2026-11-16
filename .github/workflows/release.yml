@@ -2,7 +2,7 @@ name: Release mod
 
 on:
   push:
-    branches: [main]
+    branches: [pooled-plus]
   workflow_dispatch:
 
 permissions:

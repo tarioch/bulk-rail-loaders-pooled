@@ -1,4 +1,20 @@
-# Modern Bulk Rail Loaders: Pooled
+# Bulk Rail Loaders: Pooled Plus
+
+A fork of
+[Modern Bulk Rail Loaders: Pooled](https://github.com/solvemon/bulk-rail-loaders-pooled)
+by Sølve Monteiro, based on the Factorio 2.1 port and save migration by
+[kfsone](https://github.com/kfsone/bulk-rail-loaders-pooled). It adds exact
+loading for Cybersyn 2 deliveries and reworked graphics. It replaces the
+original mod and cannot be enabled together with it.
+
+**Existing saves:** disable or remove the original mod (or kfsone's
+*Unofficial 2.1 Fix*) before enabling this one. Silos, pools and their contents
+are kept, and the mod's script state is rebuilt from the placed entities on
+first load. Each station's **Load/Unload mode** cannot be recovered from the
+map: every station comes back as *Load*, so reopen unloading stops and switch
+them back to *Unload*, or use the `set_station_mode` remote call below. The
+wagon count remembered by the stop panel resets; the gap style is inferred
+from the silo layout.
 
 A pooled-inventory rework of the bulk rail loader concept. Every station has
 **one** hidden cargo inventory (the *pool*); each visible silo is a Factorio 2.0
@@ -11,7 +27,7 @@ only one inventory per station:
 * Factory inserters/loaders can feed or drain **any** silo; it all lands in the
   same pool.
 
-Requires **Factorio ≥ 2.1.0**. (This fork only bumps compatibility from the upstream 2.0 release; 2.0 users should use the upstream mod.)
+Requires **Factorio ≥ 2.1.0**. Factorio 2.0 users should use the original mod.
 
 ## Usage
 
@@ -43,6 +59,17 @@ and Cybersyn 2 then orders the same delivery again. On the station combinator
 of every unload station, set *Inactivity mode* to **After delivery** with a
 timeout of at least 1 second.
 
+### Remote interface
+
+`remote.call("mbrlp", "set_station_mode", surface_name, x, y, mode)` sets the
+station whose train stop is within 0.5 tiles of `(x, y)` to `"load"` or `"unload"`
+(same as the stop panel's switch, silos are redrawn). Returns `true` on success,
+`false` for bad arguments or no station found. Example:
+`/c remote.call("mbrlp", "set_station_mode", "nauvis", -427, 55, "unload")`.
+`remote.call("mbrlp", "get_station_mode", surface_name, x, y)` returns the
+station's mode (`"load"`/`"unload"`) or `nil`. Handy for re-setting modes after
+the state rebuild described above.
+
 ## Design notes
 
 * The pool is a hidden, indestructible container placed at the train stop. Its
@@ -57,7 +84,8 @@ timeout of at least 1 second.
 
 ## Licensing / attribution
 
-* Code: original to this mod.
+* Code: by Sølve Monteiro (original mod), kfsone (Factorio 2.1 port, save migration, remote interface) and
+  tarioch (this fork).
 * All graphics (`graphics/loader-*.png`, `graphics/unloader-*.png`) are from
   [railloader by mspielberg (therax)](https://github.com/mspielberg/factorio-railloader),
   licensed **LGPL-3.0** (see `LICENSE-railloader-graphics`). Keep that license
@@ -75,5 +103,5 @@ Symlink into your mods folder under the mod's name (the folder name must match
 `info.json`):
 
 ```
-ln -s /path/to/this/repo ~/.factorio/mods/modern-bulk-rail-loader-pooled
+ln -s /path/to/this/repo ~/.factorio/mods/bulk-rail-loaders-pooled-plus
 ```
